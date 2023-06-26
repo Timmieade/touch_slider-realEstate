@@ -72,11 +72,12 @@ input:checked ~ .navbar .sidebar {
 
 
 .slider-container{
-    height: 100vh;
+    height: 78vh;
     display: inline-flex;
     overflow: hidden;
     transform: translateX(0);
     transition: transform o.3s ease-out;
+    padding-top: 16px;
     /* cursor: grab; */
     
 
@@ -93,7 +94,7 @@ input:checked ~ .navbar .sidebar {
 }
 img{
     max-width: 100%;
-    max-height: 45%;
+    max-height: 60%;
     transition: transform o.3s ease-in-out;
 
 }
@@ -124,16 +125,17 @@ p{
         position: absolute;
         width: 100%;
         top: 70px;
-        left: 0px;
+        right: 6px;
         transform: translateY(-100%);
-        background: #dfbfbf;
+        
+        
         z-index: -1;
         transition: .6s;
-        justify-content: center;
+        justify-content: right;
     }
     .sidebar a{
-        color: rgb(85, 62, 62);
-        padding-left: 35px;
+        color: rgb(255, 255, 255);
+        padding-left: 3px;
     }
     .navbar .navbar-burger{
         display: grid !important;
