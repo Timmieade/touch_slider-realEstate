@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    background-image: url(houses/real\ estate.jpeg);
+    background-size: cover;
+    background-color: #433535;
+    background-blend-mode: multiply;
+    color: white;
+    line-height: 1.7;
+}
+.header{
+   padding-top: ;
+   padding-bottom: 1em;
+   
+    
+}
+input{
+    display: none;
+}
+input:checked ~ .navbar .sidebar {
+    transform: translateY(0);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #dfbfbf;
+    height: 10vh;
+    padding-top: 2em;
+
+}
+.navbar h1{
+    font-size: large;
+    font-weight: 800;
+    font-style: italic;
+    color: #eb3434;
+    
+}
+.navbar-burger{
+    display: none;
+    height: min-content; 
+    cursor: pointer;
+
+
+}
+.navbar-burger span{
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: black;
+    border-radius: 10%;
+    transition: .4s;
+
+}
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+.sidebar a {
+    text-decoration: none;
+    padding: 0.5em;
+    margin-left: 2em;
+    color: black;
+}
+.navbar .sidebar a:hover {
+    background: rgb(208, 170, 170);
+}
+
+
+.slider-container{
+    height: 100vh;
+    display: inline-flex;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: transform o.3s ease-out;
+    /* cursor: grab; */
+    
+
+}
+.slide{
+    max-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    
+}
+img{
+    max-width: 100%;
+    max-height: 45%;
+    transition: transform o.3s ease-in-out;
+
+}
+h2{
+    color: bisque;
+    font-weight: bold;
+}
+p{
+    color: rgb(117, 236, 236);
+}
+.slider-container .slide a{
+    text-decoration: none;
+    color: rgb(138, 94, 39);
+    background-color: rgb(18, 18, 18);
+    padding: 0.5em 1.5em;
+}
+
+@media (max-width: 640px) {
+    .navbar{
+        display: flex;
+        
+    }
+    .navbar h1 {
+        font-size: 13px;
+    }
+    .sidebar {
+        display: grid;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 0px;
+        transform: translateY(-100%);
+        background: #dfbfbf;
+        z-index: -1;
+        transition: .6s;
+        justify-content: center;
+    }
+    .sidebar a{
+        color: rgb(85, 62, 62);
+        padding-left: 35px;
+    }
+    .navbar .navbar-burger{
+        display: grid !important;
+    }
+   p{
+    font-size: 12px;
+    font-weight: bold;
+   }
+   .slider-container .slide a{
+    margin-top: 8px;
+   }
+}
